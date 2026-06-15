@@ -1,12 +1,13 @@
 from flask import Flask, request, jsonify
 import time
+import os
 
 app = Flask(__name__)
 
 # in-memory storage (simple version)
 weather_data = {}
 
-API_KEY = "supersecret123"
+API_KEY = os.getenv("API_KEY")
 
 
 
@@ -114,4 +115,4 @@ def get_server_weather(server_id):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=10000)
