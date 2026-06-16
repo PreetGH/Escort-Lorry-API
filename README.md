@@ -83,7 +83,7 @@ pip install requests
 ```python
 import requests
 
-url = https://escort-lorry-api.onrender.com/weather
+url = "https://escort-lorry-api.onrender.com/weather"
 data = requests.get(url).json()
 
 print(data)
